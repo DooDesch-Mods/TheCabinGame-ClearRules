@@ -1,3 +1,3 @@
-Adds English explanations to existing Knight, Clovers, Stranger/Thief, balloon, train and breaker cards. Explains doors without exposing random solutions.
+Adds English rule explanations below the original Knight, Clovers, Thief, Visitor, balloon, train and breaker card text. Random answers remain hidden and event mechanics stay unchanged.
 
-Requires UE4SS v3.0.1-1164-g5e627997 and Steam build 25553694.
+Requires [UE4SS](https://www.nexusmods.com/thecabingame/mods/4). Optional [Mod Settings](https://www.nexusmods.com/thecabingame/mods/6) provides an enable/disable toggle.

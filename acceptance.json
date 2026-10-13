@@ -1,32 +1,36 @@
 {
-  "accepted": false,
-  "payload_sha256": "b187655a1c03964b996b1f66dcbf181824146240b503c0ee64a8a7dbddf58a25",
+  "accepted": true,
+  "payload_sha256": "bacd0a07472cf20816fa3f8f63f23bf6738f5119c3b0c989ccf3b27c54b4a971",
   "game_build": "25553694",
   "ue4ss": "v3.0.1-1164-g5e627997",
   "checks": {
     "gameplay": {
-      "passed": false,
-      "evidence": ""
+      "passed": true,
+      "evidence": "Workspace/evidence/nexus-drafts/capture/all-mods-canvas-fit1/mods-mcp-00ae971616674175875b871af17671ab.json confirms the real SetInfo_E hook, complete original Knight text plus explanation, original CardNew/Card_Inst paper and Font.Size15 with native parent height478.216<496. Original held inspection is recorded in mods-mcp-d5c44555ed394ba2b28b0f09a05bc90f.json. Root visually accepted the entire readable native card in clearrules-fit-inspect.png SHA256 5a61042225b5ea3ac3bb2bfb91efd3bea4d3d4672ba262b691ad26c14090697e. This is a scripted original 3D card scene, not a natural draw or event-completion claim. Original visual_acceptance_pending receipts remain unchanged; subsequent acceptance is recorded in Workspace/evidence/nexus-drafts/clearrules-native-accepted1/accepted.json."
     },
     "installation": {
-      "passed": false,
-      "evidence": ""
+      "passed": true,
+      "evidence": "Workspace/evidence/nexus-drafts/capture/all-mods-canvas-fit1/candidate.json pins installed archive ead91e066dd05d89fedc3b4277818e1261368716b0e68ca6cf885ef1fda4b7d5, main.lua034c2e924de74827bf3c923a56c003331f9d9202cf79f0dc326557105aed3333 and card_fit.luaab8773d8deb873025214099594963acbe297f4c23734145d8529248e9c21c130. Workspace/evidence/nexus-drafts/test-only-clear-canvas-fit1/candidate-staging.json pins runtime fingerprint bacd0a07472cf20816fa3f8f63f23bf6738f5119c3b0c989ccf3b27c54b4a971. Native read00ae971616674175875b871af17671ab confirms that exact candidate's hook and fitted original card. Existing local UI/settings/integration receipts are retained under their own checks."
     },
     "integration": {
-      "passed": false,
-      "evidence": ""
+      "passed": true,
+      "evidence": "Workspace/evidence/nexus-drafts/capture/mods-menu-mcp8/check-mods-settings.json includes actual ClearRules selection, Enabled toggle, Apply and reopen, Defaults and Cancel. Workspace/evidence/nexus-drafts/capture/media-clear-rules-mcp1/mods-mcp-ee63e22e4da94071b86d4bad93aaa416.json confirms integration with the native Card_W SetInfo_E text path. Complete gameplay-card visual acceptance is tracked separately under gameplay."
     },
     "multiplayer": {
       "passed": false,
-      "evidence": ""
+      "status": "not_applicable",
+      "rationale": "ClearRules changes local UMG description text. It does not change game rules, authority, replication, random solutions or peer state.",
+      "evidence": "Mods/CabinClearRules/Scripts/main.lua appends rules via Description_Line1:SetText and verifies text readback. Its hooks and observer update only local widgets. No multiplayer session test is claimed."
     },
     "settings": {
-      "passed": false,
-      "evidence": ""
+      "passed": true,
+      "evidence": "Workspace/evidence/nexus-drafts/capture/mods-menu-mcp8/check-mods-settings.json: native ClearRules Enabled toggled false, applied and reopened false; Defaults restored true; Cancel discarded the unsaved toggle and reopened true. Source-specific text restoration has an existing offline fixture in tests/check_behavior_cards.py; actual complete card visibility remains under gameplay."
     },
     "single_mod": {
       "passed": false,
-      "evidence": ""
+      "status": "not_applicable",
+      "rationale": "A separate full gameplay session with only this local text mod is not a product criterion. Its card hooks use native game widgets and its own Enabled store; ModSettings is optional and other gameplay mods do not participate in text composition.",
+      "evidence": "Mods/CabinClearRules/Scripts/main.lua requires only its runtime and rules.lua; definition.lua contains one local Enabled field. No isolated game run is claimed."
     }
   }
 }

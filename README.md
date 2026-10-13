@@ -1,28 +1,31 @@
-# CabinClearRules
+# Clear Rules
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/clearrules](https://support.doodesch.de/clearrules).
 
-Adds English explanations to existing Knight, Clovers, Stranger/Thief, balloon, train and breaker cards. Explains doors without exposing random solutions.
+Adds English rule explanations to existing cards in the cabin game. Read the extra instructions below the original card text. Random answers remain hidden.
 
-**Status: test candidate. Game acceptance is pending. No public release yet.**
+Covers The Knight, Clovers of Doom, The Thief, The Visitor, Red Balloons, The Basement and Feeling Small? The explanations include balloon-event doors, breaker light rules and the train's changing shape task. The mod changes card descriptions and leaves event mechanics unchanged.
 
-Target: Steam build `25553694`, Unreal 5.5 and UE4SS `v3.0.1-1164-g5e627997`. Install UE4SS separately.
+## Install
 
-1. Close the game and install the required UE4SS runtime in your private test copy.
-2. Copy `Mods/CabinClearRules` into `the_cabin_game/Binaries/Win64/ue4ss/Mods`.
+1. Close the game and install [UE4SS for the cabin game](https://www.nexusmods.com/thecabingame/mods/4).
+2. Copy `Mods/CabinClearRules` from the ZIP into the game folder's `the_cabin_game/Binaries/Win64/ue4ss/Mods`.
+3. Start the game and read a supported card.
 
-CabinModSettings is optional. Each function mod uses its defaults and its own validated settings file without the Settings card. GraphicsProfiles supplies profile templates without the Settings card and never applies a profile on startup.
+Keep existing UE4SS files and shared settings. The included `enabled.txt` enables this mod.
 
-FastTurns and ShortEvents settings take effect next round and are controlled by the host. FastTurns requires its Lua and overlay on every participating client. Other settings are local. Multiplayer acceptance is pending.
+## Settings
 
-Close the game before removal. Remove only this mod's folder and its named container files, if included. Back up `Scripts/settings.dat` first to keep preferences. GraphicsProfiles does not restore graphics automatically on removal; use Restore previous before removal if required.
+Use optional [Mod Settings](https://www.nexusmods.com/thecabingame/mods/6) in the main menu to enable or disable the added explanations. Apply saves the choice; Cancel discards unsaved changes. The mod works with its default enabled setting when Mod Settings is absent.
 
-Rejoin integration requires its matching layout/host-settings adapter and authority copies. That combined installation is unaccepted. Do not overwrite an active Rejoin runtime.
+## Remove
+
+Close the game and remove only `ue4ss/Mods/CabinClearRules`. Back up `Scripts/settings.dat` first if you want to keep your preference.
 
 ## Build and release
 
 Use Python 3.13. Run `python -m pip install -r requirements-dev.txt`, `python -m unittest discover -s tests -v`, `python tests/check_lua.py`, then `python tools/package.py`.
 
-The builder writes a deterministic candidate ZIP and checksum in `dist`. Overlay containers are committed build inputs; CI packages them and does not cook Unreal assets or download the game. Runtime Lua and containers are covered by the acceptance fingerprint. `python tools/package.py --release` rejects a missing or stale game acceptance.
+The builder writes a deterministic ZIP and checksum in `dist`. Runtime Lua is covered by the acceptance fingerprint. `python tools/package.py --release` requires current game acceptance. The development baseline is Steam build `25553694`, Unreal 5.5 and UE4SS `v3.0.1-1164-g5e627997`.
 
-CI checks Linux and Windows. See [publishing](docs/publishing.md) for the GitHub/Nexus flow and [Nexus description](docs/nexus.md) for the prepared listing.
+CI checks Linux and Windows. See [publishing](docs/publishing.md) for the GitHub/Nexus flow and [Nexus description](docs/nexus.md) for the listing text. See [LICENSE.md](LICENSE.md) for the custom DooDesch license.
