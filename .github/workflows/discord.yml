@@ -38,6 +38,7 @@ jobs:
           PRODUCT_NAME: Cabin Clear Rules
           PRODUCT_SUMMARY: Adds English explanations to Knight, Clovers, Stranger/Thief, balloon, train and breaker cards.
           PRODUCT_SUPPORT: https://support.doodesch.de/clearrules
+          NEXUS_MOD_URL: ${{ vars.NEXUS_MOD_URL }}
           PRODUCT_THUMBNAIL: https://raw.githubusercontent.com/DooDesch-Mods/TheCabinGame-ClearRules/main/docs/thumbnail.png
         run: python tools/announce-release.py
       - name: Keep Discord acknowledgement
