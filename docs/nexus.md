@@ -2,6 +2,8 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/clearrules](https://support.doodesch.de/clearrules).
 
+[![Discord](https://mods.doodesch.de/img/badge.png)](https://mods.doodesch.de)
+
 Adds English rule explanations below the original text on Knight, Clovers, Thief, Visitor, balloon, train and breaker cards. Random answers remain hidden.
 
 Read the extra instructions on the existing cards. The mod explains balloon-event doors, breaker light rules and the train's changing shape task without changing event mechanics.
@@ -17,3 +19,9 @@ Use optional [Mod Settings](https://www.nexusmods.com/thecabingame/mods/6) in th
 ## Remove
 
 Close the game and remove only this mod's folder. Back up `Scripts/settings.dat` first if you want to keep your preference.
+
+## Community
+
+[![DooDesch Mods on Discord](https://mods.doodesch.de/img/card.png)](https://mods.doodesch.de)
+
+Join the DooDesch Mods Discord: update pings, polls on what comes next, and playtests of new mods.
