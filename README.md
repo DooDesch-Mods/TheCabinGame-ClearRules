@@ -2,6 +2,8 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/clearrules](https://support.doodesch.de/clearrules).
 
+[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de)
+
 Adds English rule explanations to existing cards in the cabin game. Read the extra instructions below the original card text. Random answers remain hidden.
 
 Covers The Knight, Clovers of Doom, The Thief, The Visitor, Red Balloons, The Basement and Feeling Small? The explanations include balloon-event doors, breaker light rules and the train's changing shape task. The mod changes card descriptions and leaves event mechanics unchanged.
@@ -29,3 +31,9 @@ Use Python 3.13. Run `python -m pip install -r requirements-dev.txt`, `python -m
 The builder writes a deterministic ZIP and checksum in `dist`. Runtime Lua is covered by the acceptance fingerprint. `python tools/package.py --release` requires current game acceptance. The development baseline is Steam build `25553694`, Unreal 5.5 and UE4SS `v3.0.1-1164-g5e627997`.
 
 CI checks Linux and Windows. See [publishing](docs/publishing.md) for the GitHub/Nexus flow and [Nexus description](docs/nexus.md) for the listing text. See [LICENSE.md](LICENSE.md) for the custom DooDesch license.
+
+## Community
+
+[![DooDesch Mods on Discord](https://mods.doodesch.de/img/card.svg)](https://mods.doodesch.de)
+
+Join the DooDesch Mods Discord: update pings, polls on what comes next, and playtests of new mods.
